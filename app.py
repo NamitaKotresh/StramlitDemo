@@ -1,4 +1,3 @@
-import streamlit as st
 import openai
 import os
 from dotenv import load_dotenv
@@ -13,7 +12,7 @@ else:
     openai.api_key = api_key
 
 # App Title
-st.title("ChatGPT Clone")
+st.title("ChatGPT Clone2")
 st.write("Powered by OpenAI GPT")
 
 # Input Area
@@ -22,8 +21,8 @@ user_input = st.text_area("Enter your message:")
 if st.button("Submit"):
     if user_input.strip():
         try:
-            # Call OpenAI API (updated interface)
-            response = openai.Chat.create(
+            # Call OpenAI API
+            response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "user", "content": user_input}],
             )
