@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 # Load API key from .env file
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("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")
 
 if not api_key:
     st.error("Please provide a valid OpenAI API key in the .env file.")
@@ -13,7 +13,7 @@ else:
     openai.api_key = api_key
 
 # App Title
-st.title("ChatGPT Clone")
+st.title("ChatGPT Clone2")
 st.write("Powered by OpenAI GPT")
 
 # Input Area
