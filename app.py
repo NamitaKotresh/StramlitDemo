@@ -1,11 +1,9 @@
-from openai import OpenAI
+import os
 import streamlit as st
 
-
-mykey =  st.secrets["OPENAI_API_KEY"]
-mykey_texvalue =  st.secrets["test_value"]
-st.title("ChatGPT-like clone"+str(mykey_texvalue))
-client = OpenAI(api_key=mykey)
+os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
+st.title("ChatGPT-like clone")
+client = OpenAI()
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
