@@ -3,7 +3,7 @@ import os
 import streamlit as st
 
 os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
-st.title("ChatGPT-like clone")
+st.title("ChatGPT-like clone"+str(os.environ["OPENAI_API_KEY"])) 
 client = OpenAI()
 
 if "openai_model" not in st.session_state:
